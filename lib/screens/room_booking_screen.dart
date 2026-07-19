@@ -233,7 +233,7 @@ class _RoomBookingScreenState extends State<RoomBookingScreen> {
                 controller: _nameController,
                 decoration: InputDecoration(
                   labelText: langProv.translate('full_name'),
-                  hintText: langProv.currentLanguage == 'gu' ? 'તમારું પૂરું નામ લખો' : 'Enter your full name',
+                  hintText: langProv.translate('enter_full_name'),
                   prefixIcon: const Icon(Icons.person_outline, color: AppColors.textSecondary),
                 ),
                 validator: (v) => v == null || v.isEmpty ? 'Required' : null,

@@ -138,7 +138,7 @@ class _BookingConfirmationScreenState extends State<BookingConfirmationScreen>
                                   size: 16, color: AppColors.saffron),
                               const SizedBox(width: 8),
                               Text(
-                                '${langProv.currentLanguage == 'gu' ? 'બુકિંગ આઈડી' : 'Booking ID'}: ${widget.booking.id}',
+                                '${langProv.translate('booking_id')}: ${widget.booking.id}',
                                 style: GoogleFonts.poppins(
                                   fontSize: 14,
                                   fontWeight: FontWeight.w600,
@@ -152,7 +152,7 @@ class _BookingConfirmationScreenState extends State<BookingConfirmationScreen>
 
                         _DetailRow(
                           icon: Icons.person_outline,
-                          label: langProv.currentLanguage == 'gu' ? 'મહેમાન' : 'Guest',
+                          label: langProv.translate('guest'),
                           value: widget.booking.guestName,
                         ),
                         const Divider(height: 20),
@@ -176,7 +176,7 @@ class _BookingConfirmationScreenState extends State<BookingConfirmationScreen>
                         const Divider(height: 20),
                         _DetailRow(
                           icon: Icons.nights_stay_outlined,
-                          label: langProv.currentLanguage == 'gu' ? 'સમયગાળો' : 'Duration',
+                          label: langProv.translate('duration'),
                           value: '${widget.booking.nights} ${langProv.translate(widget.booking.nights > 1 ? 'nights' : 'night')}',
                         ),
                         const Divider(height: 20),
@@ -229,7 +229,7 @@ class _BookingConfirmationScreenState extends State<BookingConfirmationScreen>
                       const Icon(Icons.check_circle, size: 16, color: AppColors.success),
                       const SizedBox(width: 8),
                       Text(
-                        langProv.currentLanguage == 'gu' ? 'ચુકવણી સફળ રહી' : 'Payment Successful',
+                        langProv.translate('payment_successful'),
                         style: GoogleFonts.inter(
                           fontSize: 13,
                           fontWeight: FontWeight.w600,

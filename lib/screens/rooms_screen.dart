@@ -81,6 +81,10 @@ class RoomsScreen extends StatelessWidget {
                     child: Text('English', style: GoogleFonts.inter(fontSize: 14)),
                   ),
                   PopupMenuItem(
+                    value: 'hi',
+                    child: Text('हिन्दी', style: GoogleFonts.inter(fontSize: 14)),
+                  ),
+                  PopupMenuItem(
                     value: 'gu',
                     child: Text('ગુજરાતી', style: GoogleFonts.inter(fontSize: 14)),
                   ),
@@ -98,7 +102,7 @@ class RoomsScreen extends StatelessWidget {
                       const Icon(Icons.language, size: 16, color: AppColors.textSecondary),
                       const SizedBox(width: 4),
                       Text(
-                        langProv.currentLanguage == 'en' ? 'English' : 'ગુજરાતી',
+                        langProv.currentLanguageName,
                         style: GoogleFonts.inter(
                           fontSize: 12,
                           color: AppColors.textPrimary,

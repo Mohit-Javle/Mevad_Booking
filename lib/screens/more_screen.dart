@@ -71,6 +71,10 @@ class _MoreScreenState extends State<MoreScreen> {
                     child: Text('English', style: GoogleFonts.inter(fontSize: 14)),
                   ),
                   PopupMenuItem(
+                    value: 'hi',
+                    child: Text('हिन्दी', style: GoogleFonts.inter(fontSize: 14)),
+                  ),
+                  PopupMenuItem(
                     value: 'gu',
                     child: Text('ગુજરાતી', style: GoogleFonts.inter(fontSize: 14)),
                   ),
@@ -88,7 +92,7 @@ class _MoreScreenState extends State<MoreScreen> {
                       const Icon(Icons.language, size: 16, color: AppColors.textSecondary),
                       const SizedBox(width: 4),
                       Text(
-                        langProv.currentLanguage == 'en' ? 'English' : 'ગુજરાતી',
+                        langProv.currentLanguageName,
                         style: GoogleFonts.inter(fontSize: 12, color: AppColors.textPrimary, fontWeight: FontWeight.w500),
                       ),
                     ],
@@ -280,14 +284,10 @@ class _MoreScreenState extends State<MoreScreen> {
                               onTap: () => langProv.setLanguage('en'),
                             ),
                             const SizedBox(width: 8),
-                            _LanguageButton(
+                             _LanguageButton(
                               label: 'हिन्दी',
                               isSelected: langProv.currentLanguage == 'hi',
-                              onTap: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Hindi language support is coming soon!')),
-                                );
-                              },
+                              onTap: () => langProv.setLanguage('hi'),
                             ),
                             const SizedBox(width: 8),
                             _LanguageButton(

@@ -75,9 +75,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
     final paymentMethods = [
       {'name': 'UPI', 'icon': Icons.phone_android_rounded, 'subtitle': 'Google Pay, PhonePe, Paytm'},
-      {'name': langProv.currentLanguage == 'gu' ? 'કાર્ડ' : 'Card', 'icon': Icons.credit_card_rounded, 'subtitle': langProv.currentLanguage == 'gu' ? 'ક્રેડિટ / ડેબિટ કાર્ડ' : 'Credit / Debit Card'},
-      {'name': langProv.currentLanguage == 'gu' ? 'નેટ બેંકિંગ' : 'Net Banking', 'icon': Icons.account_balance_rounded, 'subtitle': langProv.currentLanguage == 'gu' ? 'બધી મુખ્ય બેંકો' : 'All major banks'},
-      {'name': langProv.currentLanguage == 'gu' ? 'કાઉન્ટર પર ચૂકવણી' : 'Pay at Counter', 'icon': Icons.storefront_rounded, 'subtitle': langProv.currentLanguage == 'gu' ? 'આગમન પર રોકડ' : 'Cash on arrival'},
+      {'name': langProv.translate('card'), 'icon': Icons.credit_card_rounded, 'subtitle': langProv.translate('credit_debit_card')},
+      {'name': langProv.translate('net_banking'), 'icon': Icons.account_balance_rounded, 'subtitle': langProv.translate('all_major_banks')},
+      {'name': langProv.translate('pay_at_counter'), 'icon': Icons.storefront_rounded, 'subtitle': langProv.translate('cash_on_arrival')},
     ];
 
     return Scaffold(
